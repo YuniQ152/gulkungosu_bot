@@ -1,6 +1,9 @@
 ## 이것은
 디스코드 봇 ｢글쿤 고수｣의 공동농장 명령어 기능입니다.
 
+## 글쿤 고수 서포트 서버
+ttps://discord.gg/WXjQZ3eJs5
+
 ## 요구사항
 - Python 3.10+
 - discord.py 2.0+
