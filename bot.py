@@ -72,7 +72,7 @@ async def cofarm2_command(ctx: commands.Context):
                 if humidity < 0.9:
                     waterable += 1
 
-                if humidity < 0.2 or fertility < 0.2 or health < 0.4:
+                if humidity < 0.2 or fertility < 0.3 or health < 0.5:
                     severe_count += 1
                     if   growth == "dirt":        severe_text += f"> 🟫"
                     elif growth == "germination": severe_text += f"> 🌱"
@@ -80,9 +80,9 @@ async def cofarm2_command(ctx: commands.Context):
                     elif growth == "fruitage":    severe_text += f"> {fetch_crop_info(crop_id)['icon']}"
                     severe_text += f" **{fetch_crop_info(crop_id)['name_ko']}**"
 
-                    if fertility < 0.2: severe_text += f" | 🍔 비옥도: `{int(fertility*100)}%`"
+                    if fertility < 0.3: severe_text += f" | 🍔 비옥도: `{int(fertility*100)}%`"
                     if humidity < 0.2:  severe_text += f" | 💧 수분: `{int(humidity*100)}%`"
-                    if health < 0.4:    severe_text += f" | 💚 체력: `{int(health*100)}%`"
+                    if health < 0.5:    severe_text += f" | 💚 체력: `{int(health*100)}%`"
                     if status == 1:     severe_text += f" | 🤒 다갈증"
                     if status == 2:     severe_text += f" | 🦠 곰팡이"
 
